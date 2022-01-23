@@ -1,0 +1,3 @@
+type THello = {
+  hello: string;
+};
