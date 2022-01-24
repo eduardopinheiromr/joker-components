@@ -6,4 +6,4 @@
 
 # **Used Technologies**
 
-Next.js | Next-Auth | React Hook Forms + Yup | Chakra UI | TypeScript | Preact Compat
+Next.js | Next-Auth | React Hook Forms + Yup | Chakra UI | TypeScript
