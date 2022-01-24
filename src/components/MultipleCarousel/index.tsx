@@ -3,8 +3,8 @@ import { useState } from "react";
 import SlideButton from "./SlideButton";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper";
-import { breakpoints, navigation } from "./constants";
+import { Pagination } from "swiper";
+import { breakpoints } from "./constants";
 
 const Carousel = chakra(Swiper);
 
@@ -49,10 +49,9 @@ export default function MultipleCarousel({ cards, ...props }: Props) {
         />
       </Flex>
       <Carousel
-        navigation={navigation}
         breakpoints={breakpoints}
         spaceBetween={30}
-        modules={[Navigation, Pagination]}
+        modules={[Pagination]}
         pagination={{ clickable: true }}
         onInit={(swiper) => {
           setSwiper(swiper);

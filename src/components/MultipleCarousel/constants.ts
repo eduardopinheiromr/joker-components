@@ -12,8 +12,3 @@ export const breakpoints = {
     slidesPerView: 4,
   },
 };
-
-export const navigation = {
-  nextEl: ".swiper-button-next",
-  prevEl: ".swiper-button-prev",
-};
