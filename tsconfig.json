@@ -15,6 +15,7 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
+      "@regexps": ["src/regexps/index"],
       "@utils/*": ["src/utils/*"],
       "@services/*": ["src/services/*"],
       "@mocks/*": ["src/mocks/*"],

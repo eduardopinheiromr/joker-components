@@ -1,4 +1,6 @@
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Flex, Heading } from "@chakra-ui/react";
+import CreateUserForm from "@components/Forms/CreateUserForm";
+import LoginForm from "@components/Forms/LoginForm";
 import PageLayout from "@components/layouts/PageLayout";
 import MultipleCarousel from "@components/MultipleCarousel";
 import PageTags from "@components/PageTags";
@@ -31,6 +33,14 @@ const Home = () => {
         </Heading>
         <MultipleCarousel cards={mockedCards} />
       </Box>
+
+      <Heading mt={16} textAlign="center">
+        Formulários
+      </Heading>
+      <Flex my={8} mx="auto" maxW="4xl" justify="space-between">
+        <CreateUserForm />
+        <LoginForm />
+      </Flex>
     </PageLayout>
   );
 };
