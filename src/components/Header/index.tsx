@@ -7,6 +7,8 @@ import MobileMenu from "./MobileMenu";
 import { navigation } from "./constants";
 import Brand from "@components/Brand";
 import { useRouter } from "next/router";
+import { Icon } from "@chakra-ui/react";
+import { FaGithub } from "react-icons/fa";
 
 export default function Header() {
   const router = useRouter();
@@ -39,6 +41,7 @@ export default function Header() {
           w="full"
           align="center"
           justify="space-between"
+          py={2}
         >
           <Flex align="center" style={{ gap: "16px" }}>
             {navigation.map((nav, key) => (
@@ -63,8 +66,13 @@ export default function Header() {
             ))}
           </Flex>
 
-          <Button h="59px" href="#">
-            Call To Action
+          <Button
+            leftIcon={<Icon as={FaGithub} />}
+            h="42px"
+            href="https://github.com/eduardopinheiromr/joker-components"
+            isExternal
+          >
+            Github
           </Button>
         </Flex>
       </Container>

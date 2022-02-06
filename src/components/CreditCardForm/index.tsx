@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, useToast } from "@chakra-ui/react";
+import { Box, Flex, useToast } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 // import Image from "next/image";
 import CustomInput from "@components/CustomInput";
@@ -71,7 +71,6 @@ export default function CreditCardForm() {
 
   return (
     <Container>
-      <Heading textAlign="center">Pagamento com cartão de crédito</Heading>
       <Flex
         mt={[-8, 4, 8]}
         direction={["column", "column", "column", "row"]}

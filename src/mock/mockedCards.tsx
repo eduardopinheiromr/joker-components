@@ -3,7 +3,7 @@ import { Box, Text } from "@chakra-ui/react";
 import placeholderImage from "@images/placeholder-image.png";
 
 export const mockedCards = [
-  <Box key={1}>
+  <Box shadow="md" my={4} rounded="md" p={4} key={1} fontSize="14px">
     <Text>Card 1</Text>
     <Image src={placeholderImage} height={300} width={300} alt="" />
     <Text>
@@ -13,7 +13,7 @@ export const mockedCards = [
       voluptatibus eum.
     </Text>
   </Box>,
-  <Box key={2}>
+  <Box shadow="md" my={4} rounded="md" p={4} key={2} fontSize="14px">
     <Text>Card 2</Text>
     <Image src={placeholderImage} height={300} width={300} alt="" />
     <Text>
@@ -23,7 +23,7 @@ export const mockedCards = [
       voluptatibus eum.
     </Text>
   </Box>,
-  <Box key={3}>
+  <Box shadow="md" my={4} rounded="md" p={4} key={3} fontSize="14px">
     <Text>Card 3</Text>
     <Image src={placeholderImage} height={300} width={300} alt="" />
     <Text>
@@ -33,7 +33,7 @@ export const mockedCards = [
       voluptatibus eum.
     </Text>
   </Box>,
-  <Box key={4}>
+  <Box shadow="md" my={4} rounded="md" p={4} key={4} fontSize="14px">
     <Text>Card 4</Text>
     <Image src={placeholderImage} height={300} width={300} alt="" />
     <Text>
@@ -43,7 +43,7 @@ export const mockedCards = [
       voluptatibus eum.
     </Text>
   </Box>,
-  <Box key={5}>
+  <Box shadow="md" my={4} rounded="md" p={4} key={5} fontSize="14px">
     <Text>Card 5</Text>
     <Image src={placeholderImage} height={300} width={300} alt="" />
     <Text>
