@@ -24,7 +24,8 @@
       "@config/*": ["src/config/*"],
       "@theme/*": ["src/theme/*"],
       "@components/*": ["src/components/*"],
-      "@images/*": ["public/images/*"]
+      "@images/*": ["public/images/*"],
+      "@constants/*": ["src/constants/*"]
     },
     "incremental": true
   },
