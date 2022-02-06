@@ -7,9 +7,10 @@ type Props = {
 } & FlexProps;
 
 export default function SlideButton({ ...props }: Props) {
+  const { iconDirection, ...rest } = props;
   return (
     <Flex
-      {...props}
+      {...rest}
       _disabled={{ opacity: props.disabled ? 0.5 : 1 }}
       justify="center"
       align="center"
@@ -21,16 +22,16 @@ export default function SlideButton({ ...props }: Props) {
       w="50px"
       aria-label={
         "Ir para o slide " +
-        (props.iconDirection === "left" ? "anterior" : "seguinte")
+        (iconDirection === "left" ? "anterior" : "seguinte")
       }
       title={
         "Ir para o slide " +
-        (props.iconDirection === "left" ? "anterior" : "seguinte")
+        (iconDirection === "left" ? "anterior" : "seguinte")
       }
     >
       <Icon
         fontSize="24px"
-        as={props.iconDirection === "left" ? FaChevronLeft : FaChevronRight}
+        as={iconDirection === "left" ? FaChevronLeft : FaChevronRight}
       />
     </Flex>
   );

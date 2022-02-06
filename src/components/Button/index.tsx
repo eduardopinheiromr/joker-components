@@ -32,9 +32,10 @@ export default function Button(props: Props) {
 }
 
 function ButtonBase(props: Props) {
+  const { withIcon, ...parsedProps } = props;
   return (
     <ChakraButton
-      {...props}
+      {...parsedProps}
       colorScheme={props.colorScheme || "blue"}
       w={props.w ?? props.fit ? "fit-content" : "auto"}
       d="flex"
@@ -44,10 +45,10 @@ function ButtonBase(props: Props) {
       <Text as="span" whiteSpace="nowrap">
         {props.children}
       </Text>
-      {props.withIcon && props.withIcon === true ? (
+      {withIcon && withIcon === true ? (
         <Icon ml={4} as={BsArrowRight} />
       ) : (
-        props.withIcon
+        withIcon
       )}
     </ChakraButton>
   );

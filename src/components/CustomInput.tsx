@@ -29,7 +29,7 @@ type Props = {
 } & InputProps;
 
 export default function CustomInput(props: Props) {
-  const { name, leftIcon, localCache, ...rest } = props;
+  const { name, leftIcon, localCache, notClosable, ...rest } = props;
   const [defaultValue, setDefaultValue] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const { formState, register, resetField, getValues, setValue, trigger } =
@@ -112,7 +112,7 @@ export default function CustomInput(props: Props) {
             />
           ) : (
             !props.isReadOnly &&
-            !props.notClosable && (
+            !notClosable && (
               <InputRightElement
                 onClick={() => resetField(name, { defaultValue: "" })}
                 cursor="pointer"

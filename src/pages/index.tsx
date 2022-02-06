@@ -47,7 +47,15 @@ const Home = () => {
         <Heading>Formulários</Heading>
         <Text>Criados com react-hook-form e yup</Text>
       </Box>
-      <Flex my={8} mx="auto" maxW="4xl" justify="space-between">
+      <Flex
+        direction={["column", "column", "row"]}
+        px={4}
+        my={8}
+        style={{ gap: 32 }}
+        mx="auto"
+        maxW="4xl"
+        justify="space-between"
+      >
         <CreateUserForm />
         <LoginForm />
       </Flex>

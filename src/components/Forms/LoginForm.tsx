@@ -29,6 +29,7 @@ export default function LoginForm() {
 
   return (
     <Box
+      mx="auto"
       as="form"
       w="full"
       maxW="420px"
