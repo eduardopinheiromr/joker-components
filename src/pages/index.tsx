@@ -1,4 +1,5 @@
 import { Box, Flex, Heading } from "@chakra-ui/react";
+import CreditCardForm from "@components/CreditCardForm";
 import CreateUserForm from "@components/Forms/CreateUserForm";
 import LoginForm from "@components/Forms/LoginForm";
 import PageLayout from "@components/layouts/PageLayout";
@@ -40,6 +41,10 @@ const Home = () => {
       <Flex my={8} mx="auto" maxW="4xl" justify="space-between">
         <CreateUserForm />
         <LoginForm />
+      </Flex>
+
+      <Flex w="full" my={8}>
+        <CreditCardForm />
       </Flex>
     </PageLayout>
   );
