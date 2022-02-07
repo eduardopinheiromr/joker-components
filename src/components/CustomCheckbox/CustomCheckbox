@@ -1,0 +1,15 @@
+import { render, screen } from "@testing-library/react";
+// // import CustomCheckbox from "./";
+// import { Checkbox } from "./Checkbox";
+
+// describe("CustomCheckbox", () => {
+//   it("should render the custom checkbox", () => {
+//     render(<Checkbox />);
+//     expect(screen.getByRole("checkbox")).toBeInTheDocument();
+//   });
+// });
+
+describe("CustomCheckbox", () => {
+  console.log(render, screen);
+  it("should work", () => {});
+});
