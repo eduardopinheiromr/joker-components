@@ -11,6 +11,19 @@
 
 ---
 
+## Tests
+
+Current coverage:
+[] - components
+[x] - utils
+[] - services
+[] - regexps
+[] - hooks
+[] - theme
+
+To run tests:
+`yarn test`
+
 # **Used Technologies**
 
-Next.js | Next-Auth | React Hook Forms + Yup | Chakra UI | TypeScript
+Next.js | Next-Auth | React Hook Forms + Yup | Chakra UI | TypeScript | Jest | React Testing Library
