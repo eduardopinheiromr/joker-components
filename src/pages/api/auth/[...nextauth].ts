@@ -1,38 +1,30 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { signIn } from "@services/auth";
+import { authenticate } from "@services/auth";
 
 export default NextAuth({
   providers: [
     CredentialsProvider({
-      name: "Credentials",
       credentials: {
-        username: { label: "Username", type: "text", placeholder: "jsmith" },
-        password: { label: "Password", type: "password" },
+        email: {},
+        password: {},
       },
       async authorize(credentials) {
         if (credentials) {
           try {
-            const { access_token, user } = await signIn(credentials);
+            const { token, user } = await authenticate(credentials);
 
-            if (user.admin === 0) {
-              return null;
-            }
-
-            if (access_token) {
+            if (token) {
               return {
-                id: user.id,
-                name: user.name,
-                token: access_token,
-                email: credentials.username,
+                token,
+                user,
               };
             }
           } catch (error) {
+            console.log(error);
             return null;
           }
         }
-
-        // Return null if user data could not be retrieved
         return null;
       },
     }),
@@ -44,31 +36,19 @@ export default NextAuth({
     maxAge: 60 * 60 * 24, // 24 hours
   },
 
-  jwt: {
-    secret: process.env.AUTH_SECRET,
-  },
-
   callbacks: {
     async jwt({ token, user }) {
-      user && (token.user = user);
+      if (user) {
+        token.user = user.user;
+        token.jwt = user.token;
+      }
       return token;
     },
     async session({ session, token }) {
-      session = session as {
-        user: {
-          id: number;
-          name: string;
-          email: string;
-        };
-        token: string;
-        expires: string;
-      };
-
-      // Inject JWT token
-      if (token && token.user) {
-        session.token = (token.user as { token: string }).token;
+      if (token.jwt) {
+        session.jwt = token.jwt;
+        session.user = token.user;
       }
-
       return session;
     },
   },
